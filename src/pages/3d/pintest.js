@@ -1,10 +1,19 @@
 import React from 'react'
 import "./pintrest.css"
 import StackGrid from "react-stack-grid";
+import  { transitions } from "react-stack-grid";
+ 
 const pintest = () => {
+    const { scaleDown } = transitions;
+ 
   return (
     <div className='div'><h1>The Gamming world </h1>
          <StackGrid
+          appear={scaleDown.appear}
+          appeared={scaleDown.appeared}
+          enter={scaleDown.enter}
+          entered={scaleDown.entered}
+          leaved={scaleDown.leaved}
         columnWidth={350} gutterWidth={20}
       >
        <img src="https://worlduniversityofdesign.ac.in/assets/images/bgs/animation-and-game-design-banner.jpg" />
